@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/c", "destination": "/pages/c.html" },
+    { "source": "/cpp", "destination": "/pages/cpp.html" },
+    { "source": "/python", "destination": "/pages/python.html" },
+    { "source": "/html", "destination": "/pages/html.html" }
+  ]
+}
