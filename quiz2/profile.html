@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Profile</title>
+  <link rel="stylesheet" href="quiz.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="navbar-logo">Quiz App</div>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+    <nav class="navbar-links" id="navbarLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="profile.html">Profile</a>
+    </nav>
+  </header>
+
+  <!-- Profile Info -->
+  <main class="quiz-container">
+    <h2>User Profile</h2>
+    <div id="userInfo">
+      <p><strong>Name:</strong> Guest User</p>
+      <p><strong>Email:</strong> guest@example.com</p>
+      <p><strong>Score History:</strong></p>
+      <ul id="scoreHistory">
+        <li>C Quiz: 80</li>
+        <li>Python Quiz: 60</li>
+        <li>HTML Quiz: 90</li>
+        <!-- You can load dynamic scores from localStorage if needed -->
+      </ul>
+    </div>
+  </main>
+
+  <script src="navbar.js"></script>
+</body>
+</html>

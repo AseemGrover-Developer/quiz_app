@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C++ Quiz</title>
+  <link rel="stylesheet" href="../quiz.css" />
+</head>
+<body>
+
+  <!-- Navbar (same for all pages) -->
+  <header class="navbar">
+    <div class="navbar-logo">Quiz App</div>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+    <nav class="navbar-links" id="navbarLinks">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../profile.html">Profile</a>
+    </nav>
+  </header>
+
+  <!-- Quiz Area -->
+  <main class="quiz-container">
+    <div id="question">Loading question...</div>
+    <div class="options" id="options"></div>
+    <div id="timer">Time Left: <span id="time">30</span>s</div>
+  </main>
+
+  <!-- Result Popup -->
+  <div id="resultPopup" style="display:none;" class="quiz-container">
+    <h2 id="resultMessage"></h2>
+    <p>Your Score: <span id="scoreDisplay"></span></p>
+    <button onclick="window.location.href='../index.html'">Go to Home</button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../navbar.js"></script>
+  <script src="../data/cpp.js"></script>
+</body>
+</html>

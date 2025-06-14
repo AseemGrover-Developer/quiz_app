@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="quiz.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="navbar-logo">Quiz App</div>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+    <nav class="navbar-links" id="navbarLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="profile.html">Profile</a>
+    </nav>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Contact Us</h2>
+    <form onsubmit="showPopup(event)">
+      <label for="name">Your Name:</label><br>
+      <input type="text" id="name" required><br><br>
+
+      <label for="email">Your Email:</label><br>
+      <input type="email" id="email" required><br><br>
+
+      <label for="message">Message:</label><br>
+      <textarea id="message" rows="5" required></textarea><br><br>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="contactPopup" style="display: none; margin-top: 20px;">
+      <p>🎉 Your message has been submitted! Thanks for contacting us.</p>
+    </div>
+  </main>
+
+  <script src="navbar.js"></script>
+  <script>
+    function showPopup(e) {
+      e.preventDefault();
+      document.getElementById("contactPopup").style.display = "block";
+    }
+  </script>
+</body>
+</html>

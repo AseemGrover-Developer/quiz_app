@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Python Quiz</title>
+  <link rel="stylesheet" href="../quiz.css" />
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    .quiz-container {
+      padding: 20px;
+    }
+    #question {
+      font-size: 1.2em;
+      margin-bottom: 15px;
+    }
+    .options button {
+      display: block;
+      margin: 8px 0;
+      padding: 10px;
+      width: 100%;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    #timer {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar (same for all pages) -->
+  <header class="navbar">
+    <div class="navbar-logo">Quiz App</div>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+    <nav class="navbar-links" id="navbarLinks">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../profile.html">Profile</a>
+    </nav>
+  </header>
+
+  <!-- Quiz Area -->
+  <main class="quiz-container">
+    <div id="question">Loading question...</div>
+    <div class="options" id="options"></div>
+    <div id="timer">Time Left: <span id="time">30</span>s</div>
+  </main>
+
+  <!-- Result Popup -->
+  <div id="resultPopup" style="display:none;" class="quiz-container">
+    <h2 id="resultMessage"></h2>
+    <p>Your Score: <span id="scoreDisplay"></span></p>
+    <button onclick="window.location.href='../index.html'">Go to Home</button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../navbar.js"></script>
+  <script src="../data/python.js"></script>
+</body>
+</h
