@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Python Quiz</title>
+  <link rel="stylesheet" href="../quiz.css" />
+  <style>
+    body{
+      position: relative;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar{
+      top: 0;
+      z-index: 1000;
+    }
+
+    .quiz-container{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="navbar-logo">Quiz App</div>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+    <nav class="navbar-links" id="navbarLinks">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#let-start">Quiz</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="quiz-container">
+    <div id="question">Loading question...</div>
+    <div class="options" id="options"></div>
+    <div id="timer">Time Left: <span id="time">30</span>s</div>
+  </main>
+
+  <div id="resultPopup" style="display:none;" class="quiz-container">
+    <h2 id="resultMessage"></h2>
+    <p>Your Score: <span id="scoreDisplay"></span></p>
+    <button onclick="window.location.href='../index.html'">Go to Home</button>
+  </div>
+
+  <script src="../navbar.js"></script>
+  <script src="../data/android.js"></script>
+</body>
+</html>

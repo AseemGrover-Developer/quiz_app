@@ -1,0 +1,383 @@
+/* quiz.css */
+
+/* Reset & base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #222;
+  min-height: 100vh;
+}
+
+::selection{
+  background-color:#e68900;
+  color: #EFEAE3;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #222;
+  color: #fff;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  font-size: 24px;
+  font-weight: 900;
+  color: #ff9800;
+}
+
+.navbar nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 10px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar nav a:hover {
+  color: #ff9800;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+#home{
+  height: 100vh;
+  width: 100vw;
+  background-image: url('./assets/bg2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* padding-top: 56.25%; */
+  position: relative;
+}
+
+
+.home-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5vh 5vw;
+  min-height: 100vh;
+}
+
+.home-container img{
+  position: absolute;
+  z-index: 0;
+}
+
+.intro {
+  text-align: center;
+  width: max-content;
+  height: max-content;
+  padding: 40px 35px;
+  background: #00000021;
+  border-radius: 6px;
+}
+
+.intro h1 {
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  color: white;
+  -webkit-text-stroke: 0.2px rgb(0, 0, 0);
+}
+
+.intro p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #343434;
+}
+
+.let-start {
+  background-color: orange;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.let-start:hover {
+  background-color: #e69500;
+}
+
+#start-quiz{
+  min-height: 100vh;
+}
+
+.container {
+  text-align: center;
+  min-height: 100vh;
+  margin: 5vh 0vh;
+  padding-top: 80px;
+
+}
+
+.container h2{
+  /* margin-top: 10vw; */
+  margin-bottom: 5vw;
+  color: #e68900;
+  text-decoration:underline;
+  font-size: 2em;
+}
+
+/* Subject Cards */
+.subject-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2vw;
+}
+
+.subject-card {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.3s ease;
+  width: 20vw;
+}
+
+.subject-card:hover {
+  transform: translateY(-5px) scale(1.01);
+  background-color: rgba(40, 39, 39, 0.693);
+  box-shadow: 0 4px 12px lch(100% 0.01 296.81 / 0.1);
+}
+
+.subject-card:hover.subject-card h3{
+    color: hsl(32, 100%, 51%);
+  }
+
+.subject-card h3{
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+
+.subject-card h3 {
+  margin-bottom: 15px;
+}
+
+.difficulty-buttons {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.start-btn {
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: 1px solid black;
+}
+
+.start-btn:hover {
+  background-color: #ff9900;
+}
+
+/* Quiz Page */
+.quiz-container {
+  padding: 40px;
+  max-width: 700px;
+  margin: auto;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-top: 50px;
+  text-align: left;
+}
+
+#question {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option-btn {
+  padding: 10px 15px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+.option-btn:hover {
+  background-color: #e0e0e0;
+}
+
+#timer {
+  margin-top: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: right;
+}
+
+#resultPopup {
+  background: #fff;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  max-width: 400px;
+  margin: 50px auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+#resultMessage {
+  font-size: 26px;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+#scoreDisplay {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+}
+
+#resultPopup button {
+  margin-top: 15px;
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#resultPopup button:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #111;
+  color: #999;
+  font-size: 14px;
+}
+@media (max-width: 768px) {
+  .subject-card {
+    width: 80%;
+    margin: auto;
+  }
+
+  .quiz-container {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .navbar {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger:hover {
+    color: #e69500;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    margin-top: 10px;
+  }
+
+  .navbar-links a {
+    padding: 10px 20px;
+    width: 94%;
+    display: block;
+    border: 1px solid rgba(255, 255, 255, 0.519);
+    border-radius: 6px;
+    box-shadow: 0px 2px 3px #99999960;
+  }
+
+  .navbar-links a:hover {
+    background-color: #494949;
+    color: #e68900;
+  }
+
+  .navbar-links.show {
+    display: flex;
+  }
+
+  .intro h1 {
+    font-size: 28px;
+  }
+
+  .intro p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 468px) {
+  .subject-card {
+    width: 90%;
+    margin: auto;
+  }
+
+  .quiz-container {
+    padding: 15px;
+    width: 95%;
+  }
+
+  .intro h1 {
+    font-size: 24px;
+  }
+
+  .let-start {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}

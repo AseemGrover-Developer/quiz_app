@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="../quiz.css" />
+  <style>
+    .contact-container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding-top: 80px;
+      min-height: 100vh;
+      transition: opacity 0.3s ease;
+    }
+
+    .contact-info, .contact-form {
+      background: #fff;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-info h2, .contact-form h2 {
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .contact-info p {
+      margin: 0.5rem 0;
+    }
+
+    .contact-info a {
+      display: inline-block;
+      margin: 0.3rem 0;
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    #msg{
+      max-width: 100%;
+      min-width: 100%;
+    }
+
+    .contact-form button {
+      background: #ff6600;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: #e65c00;
+    }
+
+    @media (max-width: 768px) {
+      .contact-container {
+        flex-direction: column;
+      }
+    }
+
+    /* Popup styles */
+    #popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.8);
+      background: #ff6600;
+      color: white;
+      padding: 1.5rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      z-index: 999;
+      font-size: 1.2rem;
+      text-align: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+
+    #popup.active {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .blurred {
+      opacity: 0.3;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="navbar-logo">Quiz App</div>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+    <nav class="navbar-links" id="navbarLinks">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#let-start">Quiz</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Contact Page -->
+  <main class="contact-container" id="contactContainer">
+    <div class="contact-form">
+      <h2>Contact Form</h2>
+      <form id="contactForm">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea id="msg" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      <p><strong>Email:</strong> quizapp.team@gmail.com</p>
+      <p><strong>Phone:</strong> +91 9876543210</p>
+      <p><strong>Follow us on:</strong></p>
+      <a href="#">Instagram</a><br>
+      <a href="#">LinkedIn</a><br>
+      <a href="#">Twitter</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 BCA Quiz App. All rights reserved.</p>
+  </footer>
+
+  <!-- Popup -->
+  <div id="popup">Thank you! Your message has been submitted.</div>
+
+  <script src="../navbar.js"></script>
+  <script>
+    const form = document.getElementById("contactForm");
+    const popup = document.getElementById("popup");
+    const contactContainer = document.getElementById("contactContainer");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Show popup and blur background
+      popup.classList.add("active");
+      contactContainer.classList.add("blurred");
+
+      // Hide popup after 3s
+      setTimeout(() => {
+        popup.classList.remove("active");
+        contactContainer.classList.remove("blurred");
+        form.reset(); // clear form
+      }, 2000);
+    });
+  </script>
+</body>
+</html>

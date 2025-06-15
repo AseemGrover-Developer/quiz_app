@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz App - Home</title>
+  <link rel="stylesheet" href="quiz.css" />
+</head>
+<body>
+  <header class="navbar">
+        <div class="navbar-logo">Quiz App</div>
+
+        <div class="hamburger" id="hamburger">&#9776;</div>
+
+        <nav class="navbar-links" id="navbarLinks">
+            <a href="index.html">Home</a>
+            <a href="#let-start">Quiz</a>
+            <a href="pages/about.html">About</a>
+            <a href="pages/contact.html">Contact</a>
+        </nav>
+  </header>
+
+  <main>
+    <!-- <img id="bgc" src="./assets/bg2.jpg" alt=""> -->
+    <div id="home">
+      <div class="home-container">
+        <section class="intro">
+          <h1>Welcome to the BCA Quiz Web App</h1>
+          <p>Test your knowledge on BCA subjects like Programming, Networking, DBMS, OS and more!</p>
+          <a href="#let-start" class="let-start">Start Quiz</a>
+        </section>
+      </div>
+    </div>
+
+    <section id="let-start">
+      <div class="container">
+        <h2>Select a Subject</h2>
+        <div class="subject-grid">
+
+            <div class="subject-card">
+              <h3>Mathematics</h3>
+              <div class="difficulty-buttons">
+                <button class="start-btn" data-subject="math" data-difficulty="easy">Easy</button>
+                <button class="start-btn" data-subject="math" data-difficulty="medium">Medium</button>
+                <button class="start-btn" data-subject="math" data-difficulty="hard">Hard</button>
+              </div>
+            </div>
+
+            <div class="subject-card">
+              <h3>C</h3>
+              <div class="difficulty-buttons">
+                <button class="start-btn" data-subject="c" data-difficulty="easy">Easy</button>
+                <button class="start-btn" data-subject="c" data-difficulty="medium">Medium</button>
+                <button class="start-btn" data-subject="c" data-difficulty="hard">Hard</button>
+              </div>
+            </div>
+
+            <div class="subject-card">
+              <h3>C++</h3>
+              <div class="difficulty-buttons">
+                <button class="start-btn" data-subject="cpp" data-difficulty="easy">Easy</button>
+                <button class="start-btn" data-subject="cpp" data-difficulty="medium">Medium</button>
+                <button class="start-btn" data-subject="cpp" data-difficulty="hard">Hard</button>
+              </div>
+            </div>
+
+            <div class="subject-card">
+              <h3>Software Engineering</h3>
+              <div class="difficulty-buttons">
+                <button class="start-btn" data-subject="se" data-difficulty="easy">Easy</button>
+                <button class="start-btn" data-subject="se" data-difficulty="medium">Medium</button>
+                <button class="start-btn" data-subject="se" data-difficulty="hard">Hard</button>
+              </div>
+            </div>
+
+            <div class="subject-card">
+              <h3>DBMS</h3>
+              <div class="difficulty-buttons">
+                <button class="start-btn" data-subject="dbms" data-difficulty="easy">Easy</button>
+                <button class="start-btn" data-subject="dbms" data-difficulty="medium">Medium</button>
+                <button class="start-btn" data-subject="dbms" data-difficulty="hard">Hard</button>
+              </div>
+            </div>
+
+            <div class="subject-card">
+              <h3>Python</h3>
+              <div class="difficulty-buttons">
+                <button class="start-btn" data-subject="python" data-difficulty="easy">Easy</button>
+                <button class="start-btn" data-subject="python" data-difficulty="medium">Medium</button>
+                <button class="start-btn" data-subject="python" data-difficulty="hard">Hard</button>
+              </div>
+            </div>
+
+            <div class="subject-card">
+              <h3>PHP</h3>
+              <div class="difficulty-buttons">
+                <button class="start-btn" data-subject="php" data-difficulty="easy">Easy</button>
+                <button class="start-btn" data-subject="php" data-difficulty="medium">Medium</button>
+                <button class="start-btn" data-subject="php" data-difficulty="hard">Hard</button>
+              </div>
+            </div>
+
+            <div class="subject-card">
+              <h3>Operating System</h3>
+              <div class="difficulty-buttons">
+                <button class="start-btn" data-subject="os" data-difficulty="easy">Easy</button>
+                <button class="start-btn" data-subject="os" data-difficulty="medium">Medium</button>
+                <button class="start-btn" data-subject="os" data-difficulty="hard">Hard</button>
+              </div>
+            </div>
+
+            <div class="subject-card">
+              <h3>Computer Networks</h3>
+              <div class="difficulty-buttons">
+                <button class="start-btn" data-subject="cn" data-difficulty="easy">Easy</button>
+                <button class="start-btn" data-subject="cn" data-difficulty="medium">Medium</button>
+                <button class="start-btn" data-subject="cn" data-difficulty="hard">Hard</button>
+              </div>
+            </div>
+
+            <div class="subject-card">
+              <h3>Linux</h3>
+              <div class="difficulty-buttons">
+                <button class="start-btn" data-subject="linux" data-difficulty="easy">Easy</button>
+                <button class="start-btn" data-subject="linux" data-difficulty="medium">Medium</button>
+                <button class="start-btn" data-subject="linux" data-difficulty="hard">Hard</button>
+              </div>
+            </div>
+
+            <div class="subject-card">
+              <h3>FCIT</h3>
+              <div class="difficulty-buttons">
+                <button class="start-btn" data-subject="fcit" data-difficulty="easy">Easy</button>
+                <button class="start-btn" data-subject="fcit" data-difficulty="medium">Medium</button>
+                <button class="start-btn" data-subject="fcit" data-difficulty="hard">Hard</button>
+              </div>
+            </div>
+
+            <div class="subject-card">
+              <h3>HTML</h3>
+              <div class="difficulty-buttons">
+                <button class="start-btn" data-subject="html" data-difficulty="easy">Easy</button>
+                <button class="start-btn" data-subject="html" data-difficulty="medium">Medium</button>
+                <button class="start-btn" data-subject="html" data-difficulty="hard">Hard</button>
+              </div>
+            </div>
+
+            <div class="subject-card">
+              <h3>CSS</h3>
+              <div class="difficulty-buttons">
+                <button class="start-btn" data-subject="css" data-difficulty="easy">Easy</button>
+                <button class="start-btn" data-subject="css" data-difficulty="medium">Medium</button>
+                <button class="start-btn" data-subject="css" data-difficulty="hard">Hard</button>
+              </div>
+            </div>
+
+            <div class="subject-card">
+              <h3>JavaScript</h3>
+              <div class="difficulty-buttons">
+                <button class="start-btn" data-subject="js" data-difficulty="easy">Easy</button>
+                <button class="start-btn" data-subject="js" data-difficulty="medium">Medium</button>
+                <button class="start-btn" data-subject="js" data-difficulty="hard">Hard</button>
+              </div>
+            </div>
+
+            <div class="subject-card">
+              <h3>JAVA</h3>
+              <div class="difficulty-buttons">
+                <button class="start-btn" data-subject="java" data-difficulty="easy">Easy</button>
+                <button class="start-btn" data-subject="java" data-difficulty="medium">Medium</button>
+                <button class="start-btn" data-subject="java" data-difficulty="hard">Hard</button>
+              </div>
+            </div>
+
+            <div class="subject-card">
+              <h3>Android</h3>
+              <div class="difficulty-buttons">
+                <button class="start-btn" data-subject="android" data-difficulty="easy">Easy</button>
+                <button class="start-btn" data-subject="android" data-difficulty="medium">Medium</button>
+                <button class="start-btn" data-subject="android" data-difficulty="hard">Hard</button>
+              </div>
+            </div>
+
+            <div class="subject-card">
+              <h3>PCAT</h3>
+              <div class="difficulty-buttons">
+                <button class="start-btn" data-subject="pcat" data-difficulty="easy">Easy</button>
+                <button class="start-btn" data-subject="pcat" data-difficulty="medium">Medium</button>
+                <button class="start-btn" data-subject="pcat" data-difficulty="hard">Hard</button>
+              </div>
+            </div>
+
+          </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 BCA Quiz App. All rights reserved.</p>
+    </footer>
+  </main>
+
+  
+
+  <script src="start.js"></script>
+  <script src="navbar.js"></script>
+</body>
+</html>
